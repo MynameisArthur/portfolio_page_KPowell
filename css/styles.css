@@ -44,6 +44,12 @@ body {
   line-height: 1.6;
 }
 
+button {
+  outline: none;
+  border: none;
+  background: none;
+}
+
 section {
   padding: 5em 2em;
 }
@@ -204,6 +210,46 @@ header {
 
 .nav__link:hover {
   color: var(--clr-accent);
+}
+
+.nav-toggle {
+  cursor: pointer;
+  padding: 0.5em;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 1000;
+}
+
+.hamburger, .hamburger::after, .hamburger::before {
+  background: var(--clr-dark);
+  width: 2em;
+  height: 2px;
+  border-radius: 1em;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+.hamburger::before, .hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.hamburger::before {
+  top: 6px;
+}
+
+.hamburger::after {
+  bottom: 6px;
 }
 
 .intro {
