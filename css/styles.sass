@@ -21,6 +21,8 @@
     margin: 0
     padding: 0
     box-sizing: border-box
+html
+    scroll-behavior: smooth
 body, html
     width: 100%
     height: 100%
@@ -156,6 +158,21 @@ header
         right: 1em
         top: 1em
         z-index: 1000
+
+.nav-open
+    .nav
+        transform: translateX(0)
+    .nav-toggle
+        position: fixed
+    .hamburger
+        transform: rotate(.625turn)        
+        background: var(--clr-accent)
+        &::before
+            background: var(--clr-accent)
+            transform: rotate(90deg) translateX(-6px)            
+        &::after
+            opacity: 0
+
 
 .hamburger,.hamburger::after,.hamburger::before
     background: var(--clr-dark)
